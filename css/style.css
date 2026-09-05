@@ -1,0 +1,662 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Google Fonts */
+
+.im-fell-english-regular {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.im-fell-english-regular-italic {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.im-fell-english-sc-regular {
+  font-family: "IM Fell English SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Styles */
+
+html {
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    height: 100%;
+}
+
+#hamburger {
+    height: 64px;
+}
+    #hamburger .button{
+        display:block;
+        height: 64px;
+        width: 64px;
+        line-height: 0;
+    }
+        #hamburger .open-button {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+        #hamburger .close-button {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+    #hamburger>ul {
+        display:none;
+        background: #fff;
+        position: absolute;
+        top: 64px;
+        width: auto;
+        margin: 0 .5rem;
+        padding: 2%;
+        border-color: #fff;
+            border-image-source:url('../images/background-1.png');
+            border-style: solid;
+            border-image-slice: 34 34 36 34;
+            border-width: 17px 17px 18px 17px;
+            border-image-repeat: stretch;
+        z-index: 1000;
+    }
+        #hamburger li {
+            display: block;
+            clear: both;
+            line-height: 1.25;
+            padding-top: .25rem;
+        }
+        #hamburger>ul>li{
+            }
+            #hamburger>ul>li>ul{
+                padding-left: .5rem;
+            }
+            #hamburger>ul>li>a{
+                font-size: 1.25rem;
+                font-weight:bold;
+                padding-bottom: .5rem;
+            }
+            #hamburger ul ul {
+                padding-left: 1rem;
+                margin-bottom: .5rem;
+            }
+    #hamburger li.contact {
+        margin-bottom: 2rem;
+    }
+    #hamburger li.spotify, #hamburger li.qobuz {
+        padding: 0 1rem;
+    }
+    #hamburger .streaming-button-label {
+        width: 80%;
+        float: right;
+    }
+    #hamburger .spotify-logo {
+        display: inline-block;
+        width: 15%;
+    }
+        #hamburger .spotify-logo img {
+            width:100%;
+        }
+    #hamburger .qobuz-logo {
+        display: inline-block;
+        width: 15%;
+    }
+        #hamburger .qobuz-logo img {
+            width:100%;
+            margin: 30.31% 0;
+        }
+
+#container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2%;
+}
+    #container:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+@media (min-width:621px) {
+    #hamburger {
+        display: none;
+    }
+    #sidenav {
+        width: 24%;
+        float:left;
+    }
+        #sidenav a {
+            display: block;
+        }
+            #sidenav a.current {
+                color: #777;
+            }
+
+        #sidenav ul {
+            margin: 0px;
+        }
+
+        #sidenav>ul {
+            border-color:#fff;
+            border-image-source: url("../images/background-2.png");
+            border-style: solid;
+            border-image-slice: 34 34 34 34;
+            border-width: 17px 17px 17px 17px;
+            border-image-repeat: stretch;
+            padding: 6.4%;
+            margin-bottom: 3rem;
+        }
+            #sidenav ul li {
+                line-height: 1.2;
+                padding-top: .3rem;
+            }
+            #sidenav>ul>li{
+            }
+            #sidenav>ul>li>ul{
+                padding-left: .5rem;
+            }
+            #sidenav>ul>li>a{
+                font-size: 1.25rem;
+                font-weight:bold;
+                padding-bottom: .5rem;
+            }
+            #sidenav ul ul {
+                padding-left: 1rem;
+                margin-bottom: .5rem;
+            }
+}
+    #sidenav .streaming-button-label{
+        padding: 0 3rem 0;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    #sidenav .spotify-logo {
+        padding: 0 1rem 1rem
+    }
+    #sidenav .spotify-logo  a {
+        width:50%;
+        margin:0px auto;
+        
+    }
+        #sidenav .spotify-logo img {
+            width:100%;
+        }
+    #sidenav .qobuz-logo {
+       /* padding:3rem 1rem 1rem */
+       padding: 0 0 1rem 0;
+    }
+    #sidenav .qobuz-logo  a {
+        width:50%;
+        margin:0px auto;
+        
+    }
+        #sidenav .qobuz-logo img {
+            width:100%;
+        }
+
+main {
+    width: 75%;
+    float: right;
+    padding: 2%;
+    border-color:#fff;
+    border-image-source:url('../images/background-3.png');
+    border-style: solid;
+    border-image-slice: 34 34 36 34;
+    border-width: 17px 17px 18px 17px;
+    border-image-repeat: stretch;
+    overflow: hidden;
+}
+
+main article {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+}
+    main article img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+h1, h2, h3, h4 {
+    font-family: "IM Fell English SC", serif;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom:1rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+ul{
+    margin-bottom:2rem;    
+}
+
+a {
+    color:#000;
+    text-decoration: none;
+}
+    a:hover {
+        color: #777;
+    }
+
+.audio-player {
+    width: 100%;
+    max-width: 300px;
+    margin: 0px auto 2rem;
+}
+    .audio-player audio {
+        display: block;
+        width: 100%;
+        /*border: 1px solid #333;*/
+    }
+        audio::-webkit-media-controls-enclosure {
+            border-radius: 0;
+        }
+    .audio-player .playlist {
+        border: 1px solid #eee;
+        /*border-top: none;*/
+    }
+    .audio-player .track {
+
+    }
+        .audio-player .track + .track {
+                border-top: 1px solid #ddd;
+            }
+        .audio-player .track a {
+            display: block;
+            padding: .25rem;
+        }
+        .audio-player .track a:hover {
+            background-color: #eee;
+            color: #000;
+        }
+        .audio-player .track.active{
+            background-color: #ddd;
+        }
+            .audio-player .track.active a:hover{
+                background: none;
+            }
+
+        .demos-and-sketches .audio-player {
+            max-width: 450px;
+        }
+    
+    figure {
+        margin: 0 2rem 2rem;
+    }
+        figure blockquote {
+            /* margin-bottom:.5rem; */
+        }
+            figure blockquote p
+            {
+                margin: 0;
+            }
+            figure blockquote p+p
+            {
+                margin-top:2rem;
+            }
+        figcaption{
+            font-weight: bold;
+            margin-left:3rem;
+        }
+            figcaption cite{
+                font-style: italic;
+            }
+.youtube-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 0 0 2rem;
+    background: #000;
+}
+
+    .youtube-container > iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+#previous-next {
+    display:block;
+    padding-top:4rem;
+    font-weight: bold;
+}
+    #previous-next:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+        #previousButton, #nextButton {
+            display: block;
+            max-width:300px;
+        }
+        #previousButton {
+            float:left;
+            margin-right:-30px;
+        }
+        #nextButton {
+            float:right;
+            margin-bottom:-35px;
+        }
+        #previous-next img {
+            width:100%;
+            max-width: 300px;
+        }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+    .gallery a {
+        display: block;
+        line-height: 0;
+        padding-bottom: 100%;
+        position: relative;
+    }
+        .gallery a img {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+/* Script Stles */
+i {
+    font-style: italic;
+}
+
+.separator {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.signature {
+    margin-left:66%;
+}
+.sung {
+    margin-left:12%;
+}
+
+p.direction, section.direction {
+    font-style: italic;
+    margin-left: 20%;
+}
+span.direction {
+    font-style: italic;
+}
+    .direction .character, .scene-heading .character, .setting .character {
+        font-style: normal;
+    }
+.scene-heading{
+    font-style: italic;
+}
+.setting {
+    font-style: italic;
+    text-align: center;
+}
+
+.direction .lb, .scene-heading .lb, .setting .lb,
+.direction .rb, .scene-heading .rb, .setting .rb
+{
+    font-style: normal;
+}
+
+.character {
+    text-transform: uppercase;
+}
+.end {
+    text-align: center;
+}
+
+/* Home Page */
+
+.home{
+     /*! min-height: 1146px; */
+    width:100vw;
+    height: 100vh;
+}
+
+.home #container
+{
+    position: relative;
+    top: 50%;
+    margin: -31.26% auto 0px;
+    width: 100vw;
+    height: 62.52vw;
+    max-width: 1833px;
+    max-height: 1146px;
+    padding: 0;
+    background-image: url("../images/home/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+    .home main
+    {
+        /*! width: 100%; */
+        padding: 0;
+        border: none;
+        float: none;
+        margin: 11.35% 41.19% 17.35% 40.37%;
+        width: 17.46%;
+        height: 54.1%;
+        max-width: 320px;
+        overflow: hidden;
+    }
+
+    #angel
+    {
+        position:absolute;
+        /*
+        width: 118px; height: 146px;
+        left: 1465px; top: 660px;
+        */
+        width: 6.44%; height: 12.74%;
+        left: 79.92%; top: 57.59%;
+        /*border: 1px #ff0000 solid;*/
+    }
+        .home h1
+        {
+            margin: 0;
+            line-height: 1;
+        }
+        .home main a
+        {
+            display: block;
+            /*width: 17.46vw;*/
+            width: 100%;
+            line-height:0;
+            background-size: cover;
+        }
+        .home main a img
+        {
+            /*width: 17.46vw;*/
+            width: 100%;
+            height:100%;
+        }
+        .home .libretto-button
+        {
+            background-image: url("../images/home/librettohover.png");
+            height: 19.73%;
+        }
+            .home .hoverable:hover img
+            {
+                display:none;
+            }
+        .home .demosandgallery-button
+        {
+            background-image: url("../images/home/demosandgalleryhover.png");
+            height: 19.1%;
+        }
+        .home .projecthistory-button
+        {
+            background-image: url("../images/home/projecthistoryhover.png");
+            height: 18.41%;
+        }
+        .home .contact-button
+        {
+            height:18.29%;
+        }
+        .toc .navlist {
+            margin-top: -.5rem;
+        }
+            .toc .navlist a {
+                font-weight: bold;
+                display:block;
+                font-family: "IM Fell English SC", serif;
+            }
+            .toc .navlist>li {
+                text-align: center;
+            }
+                .toc .navlist>li>a {
+                    font-size: 1.5rem;
+                    padding: .5rem;
+                }
+                 .toc .navlist>li>ul>li a {
+                    font-size: 1.25rem;
+                    padding: .25rem;
+                }
+/* Mobile */
+
+@media (max-width:960px) { 
+    #sidenav{
+        width: 30%;
+    }
+    main {
+        width: 69%;
+    }
+}
+
+@media (max-width:620px) { 
+    #sidenav{
+        display: none;
+    }
+    main {
+        width: 100%;
+        float: none;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+    .home {
+        height: 186.66vw;
+    }
+    .home #container {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        background: none;
+        padding: 2%;
+    }
+        .home main {
+            width: 100%;
+            height: 100%;
+            max-width: 900px;
+            max-height: 1680px;
+            border-color:#fff;
+            border-image-source:url('../images/background-1.png');
+            border-style: solid;
+            border-image-slice: 34 34 36 34;
+            border-width: 17px 17px 18px 17px;
+            border-image-repeat: stretch;
+            margin: 0px auto;
+        }
+        .home #angel {
+            display: none;
+        }
+}
+
+/* Lightbox */
+.lb-data .lb-caption, .lb-data .lb-number {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 1rem !important;
+}
